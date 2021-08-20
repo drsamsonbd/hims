@@ -116,7 +116,7 @@ export default {
 
       let token = localStorage.getItem('api_token');
       if(!token){
-      this.$router.push({name: '/login'});
+      this.$router.push({name: 'Login'});
       } else{
     this.$root.$on('toggle-sidebar', () => {
       const sidebarOpened = this.show === true || this.show === 'responsive'

@@ -577,7 +577,7 @@ __webpack_require__.r(__webpack_exports__);
 
     if (!token) {
       this.$router.push({
-        name: '/login'
+        name: 'Login'
       });
     } else {
       var self = this;
@@ -967,7 +967,7 @@ __webpack_require__.r(__webpack_exports__);
 
     if (!token) {
       this.$router.push({
-        name: '/login'
+        name: 'Login'
       });
     } else {
       this.$root.$on('toggle-sidebar', function () {
