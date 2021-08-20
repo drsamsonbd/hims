@@ -94,6 +94,7 @@ export default {
                   }
               );
             }
+            
           break;
           case 'title':
             this.buffor.push(
@@ -119,7 +120,7 @@ export default {
       self.nav = self.rebuildData(response.data);
     }).catch(function (error) {
       console.log(error);
-     alert('Please log in!');
+     alert('Please log in!'); 
     });
   }
 }
