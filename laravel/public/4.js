@@ -579,9 +579,7 @@ __webpack_require__.r(__webpack_exports__);
       self.nav = self.rebuildData(response.data);
     })["catch"](function (error) {
       console.log(error);
-      self.$router.push({
-        path: '/login'
-      });
+      alert('Please log in!');
     });
   }
 });
@@ -971,9 +969,6 @@ __webpack_require__.r(__webpack_exports__);
       self.nav = self.rebuildData(response.data);
     })["catch"](function (error) {
       console.log(error);
-      self.$router.push({
-        path: '/login'
-      });
     });
   }
 });
