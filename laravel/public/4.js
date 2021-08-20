@@ -573,14 +573,22 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    var self = this;
-    console.log(this.$apiAdress);
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.$apiAdress + '/api/menu?token=' + localStorage.getItem("api_token") + '&menu=' + 'top_menu').then(function (response) {
-      self.nav = self.rebuildData(response.data);
-    })["catch"](function (error) {
-      console.log(error);
-      alert('Please log in!');
-    });
+    var token = localStorage.getItem('api_token');
+
+    if (!token) {
+      this.$router.push({
+        name: '/login'
+      });
+    } else {
+      var self = this;
+      console.log(this.$apiAdress);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.$apiAdress + '/api/menu?token=' + localStorage.getItem("api_token") + '&menu=' + 'top_menu').then(function (response) {
+        self.nav = self.rebuildData(response.data);
+      })["catch"](function (error) {
+        console.log(error);
+        alert('Please log in!');
+      });
+    }
   }
 });
 
@@ -955,21 +963,29 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    this.$root.$on('toggle-sidebar', function () {
-      var sidebarOpened = _this.show === true || _this.show === 'responsive';
-      _this.show = sidebarOpened ? false : 'responsive';
-    });
-    this.$root.$on('toggle-sidebar-mobile', function () {
-      var sidebarClosed = _this.show === 'responsive' || _this.show === false;
-      _this.show = sidebarClosed ? true : 'responsive';
-    });
-    var self = this;
-    console.log(this.$apiAdress);
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.$apiAdress + '/api/menu?token=' + localStorage.getItem("api_token")).then(function (response) {
-      self.nav = self.rebuildData(response.data);
-    })["catch"](function (error) {
-      console.log(error);
-    });
+    var token = localStorage.getItem('api_token');
+
+    if (!token) {
+      this.$router.push({
+        name: '/login'
+      });
+    } else {
+      this.$root.$on('toggle-sidebar', function () {
+        var sidebarOpened = _this.show === true || _this.show === 'responsive';
+        _this.show = sidebarOpened ? false : 'responsive';
+      });
+      this.$root.$on('toggle-sidebar-mobile', function () {
+        var sidebarClosed = _this.show === 'responsive' || _this.show === false;
+        _this.show = sidebarClosed ? true : 'responsive';
+      });
+      var self = this;
+      console.log(this.$apiAdress);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.$apiAdress + '/api/menu?token=' + localStorage.getItem("api_token")).then(function (response) {
+        self.nav = self.rebuildData(response.data);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
   }
 });
 
