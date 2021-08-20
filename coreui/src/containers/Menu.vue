@@ -36,7 +36,7 @@
 import axios from 'axios'
 export default {
   name: 'Menu',
-    data () {
+  data () {
     return {
       //minimize: false,
       nav: [],
@@ -94,7 +94,6 @@ export default {
                   }
               );
             }
-
           break;
           case 'title':
             this.buffor.push(
@@ -112,12 +111,7 @@ export default {
       return this.buffor;
     }
   },
-  mounted () {   
-    
-      let token = localStorage.getItem('api_token');
-      if(!token){
-      this.$router.push({name: 'Login'});
-      } else{
+  mounted () {
     let self = this;
     console.log(this.$apiAdress)
     axios.get( this.$apiAdress + '/api/menu?token=' + localStorage.getItem("api_token") + '&menu=' + 'top_menu' )
@@ -125,10 +119,8 @@ export default {
       self.nav = self.rebuildData(response.data);
     }).catch(function (error) {
       console.log(error);
-     alert('Please log in!'); 
+      self.$router.push({ path: '/login' });
     });
   }
 }
-}
-
 </script>

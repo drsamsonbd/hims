@@ -113,11 +113,6 @@ export default {
     }
   },
   mounted () {
-
-      let token = localStorage.getItem('api_token');
-      if(!token){
-      this.$router.push({name: 'Login'});
-      } else{
     this.$root.$on('toggle-sidebar', () => {
       const sidebarOpened = this.show === true || this.show === 'responsive'
       this.show = sidebarOpened ? false : 'responsive'
@@ -135,9 +130,8 @@ export default {
       self.nav = self.rebuildData(response.data);
     }).catch(function (error) {
       console.log(error);
-      
+      self.$router.push({ path: '/login' });
     });
-  }
   }
 }
 </script>
