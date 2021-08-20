@@ -867,8 +867,7 @@ function configRoutes () {
           path: 'login',
           name: 'Login',
           component: Login
-        }
-      
+        }      
       ]
     },
     {

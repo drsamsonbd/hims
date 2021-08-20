@@ -1,16 +1,16 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[68],{
 
-/***/ "../coreui/src/views/resources/DeleteResource.vue":
-/*!********************************************************!*\
-  !*** ../coreui/src/views/resources/DeleteResource.vue ***!
-  \********************************************************/
+/***/ "../coreui/src/views/pkrc/ViewPatient.vue":
+/*!************************************************!*\
+  !*** ../coreui/src/views/pkrc/ViewPatient.vue ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _DeleteResource_vue_vue_type_template_id_515517a6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeleteResource.vue?vue&type=template&id=515517a6& */ "../coreui/src/views/resources/DeleteResource.vue?vue&type=template&id=515517a6&");
-/* harmony import */ var _DeleteResource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DeleteResource.vue?vue&type=script&lang=js& */ "../coreui/src/views/resources/DeleteResource.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ViewPatient_vue_vue_type_template_id_82763532___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ViewPatient.vue?vue&type=template&id=82763532& */ "../coreui/src/views/pkrc/ViewPatient.vue?vue&type=template&id=82763532&");
+/* harmony import */ var _ViewPatient_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ViewPatient.vue?vue&type=script&lang=js& */ "../coreui/src/views/pkrc/ViewPatient.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../laravel/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -20,9 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _DeleteResource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _DeleteResource_vue_vue_type_template_id_515517a6___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _DeleteResource_vue_vue_type_template_id_515517a6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _ViewPatient_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ViewPatient_vue_vue_type_template_id_82763532___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ViewPatient_vue_vue_type_template_id_82763532___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -32,47 +32,47 @@ var component = Object(_laravel_node_modules_vue_loader_lib_runtime_componentNor
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "coreui/src/views/resources/DeleteResource.vue"
+component.options.__file = "coreui/src/views/pkrc/ViewPatient.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "../coreui/src/views/resources/DeleteResource.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************!*\
-  !*** ../coreui/src/views/resources/DeleteResource.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************/
+/***/ "../coreui/src/views/pkrc/ViewPatient.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ../coreui/src/views/pkrc/ViewPatient.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteResource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./DeleteResource.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/DeleteResource.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteResource_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ViewPatient_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/babel-loader/lib??ref--4-0!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./ViewPatient.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pkrc/ViewPatient.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_laravel_node_modules_babel_loader_lib_index_js_ref_4_0_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ViewPatient_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "../coreui/src/views/resources/DeleteResource.vue?vue&type=template&id=515517a6&":
-/*!***************************************************************************************!*\
-  !*** ../coreui/src/views/resources/DeleteResource.vue?vue&type=template&id=515517a6& ***!
-  \***************************************************************************************/
+/***/ "../coreui/src/views/pkrc/ViewPatient.vue?vue&type=template&id=82763532&":
+/*!*******************************************************************************!*\
+  !*** ../coreui/src/views/pkrc/ViewPatient.vue?vue&type=template&id=82763532& ***!
+  \*******************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteResource_vue_vue_type_template_id_515517a6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./DeleteResource.vue?vue&type=template&id=515517a6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/DeleteResource.vue?vue&type=template&id=515517a6&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteResource_vue_vue_type_template_id_515517a6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ViewPatient_vue_vue_type_template_id_82763532___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../laravel/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../laravel/node_modules/vue-loader/lib??vue-loader-options!./ViewPatient.vue?vue&type=template&id=82763532& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pkrc/ViewPatient.vue?vue&type=template&id=82763532&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ViewPatient_vue_vue_type_template_id_82763532___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_DeleteResource_vue_vue_type_template_id_515517a6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _laravel_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_laravel_node_modules_vue_loader_lib_index_js_vue_loader_options_ViewPatient_vue_vue_type_template_id_82763532___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/DeleteResource.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/resources/DeleteResource.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pkrc/ViewPatient.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/pkrc/ViewPatient.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -103,46 +103,115 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'DeleteBread',
+  name: 'Aktif',
   data: function data() {
     return {
-      message: '',
-      dismissSecs: 7,
-      dismissCountDown: 0
+      items: [],
+      fields: [{
+        key: 'date',
+        label: 'Tarikh Kemasukan',
+        sortable: true,
+        sortDirection: 'asc'
+      }, {
+        key: 'time',
+        label: 'Masa',
+        sortable: true,
+        sortDirection: 'asc'
+      }, {
+        key: 'reg_number',
+        label: 'RN',
+        sortable: true,
+        sortDirection: 'asc'
+      }, {
+        key: 'name',
+        label: 'Nama',
+        sortable: true,
+        sortDirection: 'asc'
+      }, {
+        key: 'kp_passport',
+        label: 'No. Kad Pengenalan/Passport',
+        sortable: true,
+        sortDirection: 'desc'
+      }, {
+        key: 'age',
+        label: 'Umur',
+        sortable: true,
+        sortDirection: 'desc'
+      }, {
+        key: 'gender',
+        label: 'Jantina',
+        sortable: true,
+        sortDirection: 'desc'
+      }, {
+        key: 'pkrc',
+        label: 'PKRC',
+        sortable: true,
+        sortDirection: 'desc'
+      }, {
+        key: 'discharge',
+        label: 'Discaj'
+      }],
+      currentPage: 1,
+      perPage: 10,
+      totalRows: 0,
+      you: null
     };
   },
+  paginationProps: {
+    align: 'center',
+    doubleArrows: false,
+    previousButtonHtml: 'prev',
+    nextButtonHtml: 'next'
+  },
   methods: {
-    goBack: function goBack() {
-      this.$router.go(-1);
-    },
-    deleteBread: function deleteBread() {
+    getPatient: function getPatient() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(this.$apiAdress + '/api/resource/' + self.$route.params.bread + '/resource/' + self.$route.params.id + '?token=' + localStorage.getItem("api_token"), {
-        _method: 'DELETE'
-      }).then(function (response) {
-        self.$router.go(-1);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(this.$apiAdress + '/api/activepatients/' + self.$route.params.id + '?token=' + localStorage.getItem("api_token")).then(function (response) {
+        self.items = response.data.view;
       })["catch"](function (error) {
         console.log(error);
-        self.$router.push({
-          path: '/login'
-        });
+        alert('Unauthorized!');
       });
-    },
-    showAlert: function showAlert() {
-      this.dismissCountDown = this.dismissSecs;
     }
   },
-  mounted: function mounted() {}
+  mounted: function mounted() {
+    this.getPatient();
+  }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/resources/DeleteResource.vue?vue&type=template&id=515517a6&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/resources/DeleteResource.vue?vue&type=template&id=515517a6& ***!
-  \*********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!../coreui/src/views/pkrc/ViewPatient.vue?vue&type=template&id=82763532&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!../coreui/src/views/pkrc/ViewPatient.vue?vue&type=template&id=82763532& ***!
+  \*************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -159,60 +228,118 @@ var render = function() {
     [
       _c(
         "CCol",
-        { attrs: { col: "6", lg: "6" } },
+        { attrs: { col: "12", xl: "12" } },
         [
           _c(
-            "CCard",
+            "transition",
+            { attrs: { name: "slide" } },
             [
               _c(
-                "CCardBody",
+                "CCard",
                 [
-                  _c("h4", [_vm._v("Delete")]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Are you sure?")]),
+                  _c("CCardHeader", [
+                    _vm._v("\n         Pesakit Aktif\n      ")
+                  ]),
                   _vm._v(" "),
                   _c(
-                    "CAlert",
-                    {
-                      attrs: {
-                        show: _vm.dismissCountDown,
-                        color: "primary",
-                        fade: ""
-                      },
-                      on: {
-                        "update:show": function($event) {
-                          _vm.dismissCountDown = $event
-                        }
-                      }
-                    },
+                    "CCardBody",
                     [
-                      _vm._v(
-                        "\n          (" +
-                          _vm._s(_vm.dismissCountDown) +
-                          ") " +
-                          _vm._s(_vm.message) +
-                          "\n        "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "CButton",
-                    {
-                      attrs: { color: "danger" },
-                      on: {
-                        click: function($event) {
-                          return _vm.deleteBread()
-                        }
-                      }
-                    },
-                    [_vm._v("Delete")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "CButton",
-                    { attrs: { color: "primary" }, on: { click: _vm.goBack } },
-                    [_vm._v("Back")]
+                      _c("CDataTable", {
+                        attrs: {
+                          sorter: "",
+                          "column-filter": "",
+                          hover: "",
+                          striped: "",
+                          items: _vm.items,
+                          fields: _vm.fields,
+                          "items-per-page": 10,
+                          pagination: ""
+                        },
+                        on: {
+                          "row-clicked": function($event) {
+                            return _vm.view(_vm.item.id)
+                          }
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "status",
+                            fn: function(ref) {
+                              var item = ref.item
+                              return [
+                                _c(
+                                  "td",
+                                  [
+                                    _c(
+                                      "CBadge",
+                                      {
+                                        attrs: {
+                                          color: _vm.getBadge(item.status)
+                                        }
+                                      },
+                                      [_vm._v(_vm._s(item.status))]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]
+                            }
+                          },
+                          {
+                            key: "edit",
+                            fn: function(ref) {
+                              var item = ref.item
+                              return [
+                                _c(
+                                  "td",
+                                  [
+                                    _c(
+                                      "CButton",
+                                      {
+                                        attrs: { color: "primary" },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.editUser(item.id)
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Edit")]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]
+                            }
+                          },
+                          {
+                            key: "discharge",
+                            fn: function(ref) {
+                              var item = ref.item
+                              return [
+                                _c(
+                                  "td",
+                                  [
+                                    _c(
+                                      "CButton",
+                                      {
+                                        attrs: { color: "danger" },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.discharge(item.id)
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Discaj")]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]
+                            }
+                          }
+                        ])
+                      })
+                    ],
+                    1
                   )
                 ],
                 1
