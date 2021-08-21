@@ -59,15 +59,11 @@ import axios from "axios";
        
         login() {
           let self = this;
-          axios.post('/api/login', {
+          axios.post(  this.$apiAdress + '/api/login', {
            ic: self.ic,
             password: self.password,
           }).then(function (response) {
-            self.ic = '';
-            self.password = '';
-            localStorage.setItem("api_token", response.data.access_token);
-            localStorage.setItem('roles', response.data.roles);
-            localStorage.setItem('user', response.data.name);
+             User.responseAfterLogin(response)
             self.$router.push({ path: 'dashboard' });
           })
           .catch(function (error) {

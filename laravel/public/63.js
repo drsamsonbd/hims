@@ -137,15 +137,11 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     login: function login() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/login', {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(this.$apiAdress + '/api/login', {
         ic: self.ic,
         password: self.password
       }).then(function (response) {
-        self.ic = '';
-        self.password = '';
-        localStorage.setItem("api_token", response.data.access_token);
-        localStorage.setItem('roles', response.data.roles);
-        localStorage.setItem('user', response.data.name);
+        User.responseAfterLogin(response);
         self.$router.push({
           path: 'dashboard'
         });
