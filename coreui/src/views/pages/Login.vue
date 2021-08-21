@@ -12,7 +12,7 @@
                   v-model="ic"
                   prependHtml="<i class='cui-user'></i>"
                   placeholder="No. Kad Pengenalan"
-                  autocomplete="username ic"
+                  autocomplete="ic"
                 >
                   <template #prepend-content><CIcon name="cil-user"/></template>
                 </CInput>
@@ -56,9 +56,7 @@ import axios from "axios";
         }
       },
       methods: {
-        goRegister(){
-          this.$router.push({ path: 'register' });
-        },
+       
         login() {
           let self = this;
           axios.post(  this.$apiAdress + '/api/login', {
@@ -69,6 +67,7 @@ import axios from "axios";
             self.password = '';
             localStorage.setItem("api_token", response.data.access_token);
             localStorage.setItem('roles', response.data.roles);
+            localStorage.setItem('user', response.data.name);
             self.$router.push({ path: 'dashboard' });
           })
           .catch(function (error) {

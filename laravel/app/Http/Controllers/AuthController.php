@@ -94,7 +94,7 @@ class AuthController extends Controller
      */
     protected function respondWithToken($token, $ic)
     {
-        $user = User::select('menuroles as roles')->where('ic', '=', $ic)->first();
+        $user = User::select('menuroles as roles', 'name')->where('ic', '=', $ic)->first();
 
         return response()->json([
             'access_token' => $token,

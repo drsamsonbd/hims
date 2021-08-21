@@ -135,11 +135,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    goRegister: function goRegister() {
-      this.$router.push({
-        path: 'register'
-      });
-    },
     login: function login() {
       var self = this;
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(this.$apiAdress + '/api/login', {
@@ -150,6 +145,7 @@ __webpack_require__.r(__webpack_exports__);
         self.password = '';
         localStorage.setItem("api_token", response.data.access_token);
         localStorage.setItem('roles', response.data.roles);
+        localStorage.setItem('user', response.data.name);
         self.$router.push({
           path: 'dashboard'
         });
@@ -221,7 +217,7 @@ var render = function() {
                                 attrs: {
                                   prependHtml: "<i class='cui-user'></i>",
                                   placeholder: "No. Kad Pengenalan",
-                                  autocomplete: "username ic"
+                                  autocomplete: "ic"
                                 },
                                 scopedSlots: _vm._u([
                                   {
