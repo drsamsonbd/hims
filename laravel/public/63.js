@@ -145,6 +145,7 @@ __webpack_require__.r(__webpack_exports__);
         self.$router.push({
           path: 'dashboard'
         });
+        console.log(response);
       })["catch"](function (error) {
         self.message = 'Incorrect IC or password';
         self.showMessage = true;

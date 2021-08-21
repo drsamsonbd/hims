@@ -65,6 +65,7 @@ import axios from "axios";
           }).then(function (response) {
              User.responseAfterLogin(response)
             self.$router.push({ path: 'dashboard' });
+            console.log(response);
           })
           .catch(function (error) {
             self.message = 'Incorrect IC or password';
