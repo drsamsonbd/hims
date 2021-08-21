@@ -141,11 +141,14 @@ __webpack_require__.r(__webpack_exports__);
         ic: self.ic,
         password: self.password
       }).then(function (response) {
-        User.responseAfterLogin(response);
+        self.ic = '';
+        self.password = '';
+        localStorage.setItem("api_token", response.data.access_token);
+        localStorage.setItem('roles', response.data.roles);
+        localStorage.setItem('user', response.data.name);
         self.$router.push({
           path: 'dashboard'
         });
-        console.log(response);
       })["catch"](function (error) {
         self.message = 'Incorrect IC or password';
         self.showMessage = true;
