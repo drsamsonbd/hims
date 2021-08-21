@@ -137,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     login: function login() {
       var self = this;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(this.$apiAdress + '/api/login', {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/login', {
         ic: self.ic,
         password: self.password
       }).then(function (response) {
