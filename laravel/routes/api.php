@@ -13,14 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('cors')->group(function(){
-   
-     
-
-
-
- });
-
 
 Route::group(['middleware' => 'api'], function ($router) {
    
