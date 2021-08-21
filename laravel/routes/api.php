@@ -13,11 +13,15 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::middleware('cors')->group(function(){
+    Route::post('login', 'AuthController@login');
+ });
+
 
 Route::group(['middleware' => 'api'], function ($router) {
     Route::get('menu', 'MenuController@index');
 
-    Route::post('login', 'AuthController@login');
+ 
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     
