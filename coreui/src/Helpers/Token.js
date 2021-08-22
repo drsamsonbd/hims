@@ -3,7 +3,7 @@ class Token{
     isValid(token){
      const payload = this.payload(token)
      if (payload) {
-       return payload.iss = "http://127.0.0.1:8000/apilogin" ? true : false
+       return payload.iss = "https://his.hospbeluran.fastq.co/apilogin" ? true : false
      }
      return false
     }
