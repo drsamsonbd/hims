@@ -75,7 +75,7 @@ import axios from "axios";
        
         login() {
           let self = this;
-          axios.post(  this.$apiAdress + '/api/login', {
+          axios.post(   'https://his.hospbeluran.fastq.co' + '/api/login', {
            ic: self.ic,
             password: self.password,
           }).then(function (response) {
