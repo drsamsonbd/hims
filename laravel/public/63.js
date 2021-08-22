@@ -123,6 +123,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Login',
@@ -130,8 +143,11 @@ __webpack_require__.r(__webpack_exports__);
     return {
       ic: '',
       password: '',
-      showMessage: true,
-      message: ''
+      showMessage: false,
+      message: '',
+      dismissSecs: 5,
+      dismissCountDown: 0,
+      showDismissibleAlert: false
     };
   },
   methods: {
@@ -151,9 +167,15 @@ __webpack_require__.r(__webpack_exports__);
         });
       })["catch"](function (error) {
         self.message = 'Incorrect IC or password';
-        self.showMessage = true;
+        self.showAlert();
         console.log(error);
       });
+    },
+    countDownChanged: function countDownChanged(dismissCountDown) {
+      this.dismissCountDown = dismissCountDown;
+    },
+    showAlert: function showAlert() {
+      this.dismissCountDown = this.dismissSecs;
     }
   }
 });
@@ -212,6 +234,31 @@ var render = function() {
                               _c("p", { staticClass: "text-muted" }, [
                                 _vm._v("Sign In to your account")
                               ]),
+                              _vm._v(" "),
+                              _c(
+                                "CAlert",
+                                {
+                                  attrs: {
+                                    show: _vm.dismissCountDown,
+                                    color: "danger",
+                                    fade: ""
+                                  },
+                                  on: {
+                                    "update:show": function($event) {
+                                      _vm.dismissCountDown = $event
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n            (" +
+                                      _vm._s(_vm.dismissCountDown) +
+                                      ") " +
+                                      _vm._s(_vm.message) +
+                                      "\n          "
+                                  )
+                                ]
+                              ),
                               _vm._v(" "),
                               _c("CInput", {
                                 attrs: {

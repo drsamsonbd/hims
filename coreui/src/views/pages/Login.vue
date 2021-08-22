@@ -8,6 +8,14 @@
               <CForm @submit.prevent="login" method="POST">
                 <h1>Login</h1>
                 <p class="text-muted">Sign In to your account</p>
+
+                    <CAlert
+              :show.sync="dismissCountDown"
+              color="danger"
+              fade
+            >
+              ({{dismissCountDown}}) {{ message }}
+            </CAlert>
                 <CInput
                   v-model="ic"
                   prependHtml="<i class='cui-user'></i>"
@@ -25,12 +33,17 @@
                 >
                   <template #prepend-content><CIcon name="cil-lock-locked"/></template>
                 </CInput>
+
+          
                 <CRow>
                   <CCol col="6">
                     <CButton type="submit" color="primary" class="px-4">Login</CButton>
                   </CCol>
               
                 </CRow>
+
+
+
               </CForm>
             </CCardBody>
           </CCard>
@@ -51,8 +64,11 @@ import axios from "axios";
         return {
           ic: '',
           password: '',
-          showMessage: true,
-          message: '',
+        showMessage: false,
+        message: '',
+        dismissSecs: 5,
+        dismissCountDown: 0,
+        showDismissibleAlert: false
         }
       },
       methods: {
@@ -72,12 +88,18 @@ import axios from "axios";
           })
           .catch(function (error) {
             self.message = 'Incorrect IC or password';
-            self.showMessage = true;
+            self.showAlert();
             console.log(error);
           });
   
-        }
-      }
+        }, 
+            countDownChanged (dismissCountDown) {
+      this.dismissCountDown = dismissCountDown
+        },
+        showAlert () {
+          this.dismissCountDown = this.dismissSecs
+        },
+          }
     }
 
 </script>
