@@ -9,7 +9,7 @@ import User from './Helpers/User';
 window.User = User
 
 
-Vue.prototype.$apiAdress = 'https://his.hospbeluran.fastq.co'
+Vue.prototype.$apiAdress = 'http://127.0.0.1:8000'
 Vue.config.performance = true
 Vue.use(CoreuiVue)
 
