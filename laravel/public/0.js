@@ -42,9 +42,9 @@ module.exports = function xhrAdapter(config) {
 
     // HTTP basic authentication
     if (config.auth) {
-      var ic = config.auth.ic || '';
+      var username = config.auth.username || '';
       var password = config.auth.password || '';
-      requestHeaders.Authorization = 'Basic ' + btoa(ic + ':' + password);
+      requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
     }
 
     var fullPath = buildFullPath(config.baseURL, config.url);
