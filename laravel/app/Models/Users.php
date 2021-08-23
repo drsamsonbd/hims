@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Passport\HasApiTokens;
 
 class Users extends Model
 {
@@ -20,4 +21,9 @@ class Users extends Model
     protected $dates = [
         'deleted_at'
     ];
+    
+}
+class User extends Authenticatable
+{
+use HasApiTokens;
 }

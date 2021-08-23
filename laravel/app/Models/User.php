@@ -9,13 +9,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Passport\HasApiTokens; 
 
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
     use SoftDeletes;
     use HasRoles;
-    use HasFactory;
+    use HasFactory;  
+    use HasApiTokens;
+    
 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
@@ -73,4 +76,6 @@ class User extends Authenticatable implements JWTSubject
     protected $attributes = [ 
         'menuroles' => 'user',
     ];
+
+
 }

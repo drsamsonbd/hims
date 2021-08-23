@@ -14,9 +14,11 @@ use Illuminate\Http\Request;
 */
 
 
+Route::post('login', 'AuthController@login');
+Route::post('/me', [AuthController::class, 'me']);
 Route::group(['middleware' => 'api'], function ($router) {
    
-    Route::post('login', 'AuthController@login');
+    
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::get('menu', 'MenuController@index');

@@ -53,17 +53,29 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
+
+
+
     public function login(Request $request)
-    {
-        $credentials = request(['ic', 'password']);
+{
+if (!Auth::attempt($request->only('ic', 'password'))) {
+return response()->json([
+'message' => 'Invalid login details'
+           ], 401);
+       }
 
-        if (! $token = auth()->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
+$user = User::where('ic', $request['ic'])->firstOrFail();
 
-        return $this->respondWithToken($token, $request->ic);
+$token = $user->createToken('auth_token')->accessToken;
+
+return $this->respondWithToken($token, $request->ic);
     }
+// app/Http/Controllers/AuthController.php
 
+public function me(Request $request)
+{
+return $request->user();
+}
     /**
      * Log the user out (Invalidate the token).
      *

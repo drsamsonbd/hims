@@ -5,8 +5,8 @@ import router from './router'
 import CoreuiVue from '@coreui/vue'
 import { iconsSet as icons } from './assets/icons/icons.js'
 import store from './store'
-import User from './Helpers/User';
-window.User = User
+// import User from './Helpers/User';
+// window.User = User
 
 
 Vue.prototype.$apiAdress = 'http://127.0.0.1:8000'
