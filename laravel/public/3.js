@@ -499,7 +499,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../laravel/node_modu
 
 
 // module
-exports.push([module.i, "\n.c-chart-brand[data-v-3dfa97bc] {\n  position: absolute;\n  width: 100%;\n  height: 100px;\n}\n", ""]);
+exports.push([module.i, "\n.c-chart-brand[data-v-3dfa97bc] {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100px;\n}\r\n", ""]);
 
 // exports
 

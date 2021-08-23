@@ -992,7 +992,7 @@ exports = module.exports = __webpack_require__(/*! ../../../laravel/node_modules
 
 
 // module
-exports.push([module.i, "\n.fade-enter-active[data-v-7073ec54],\n.fade-leave-active[data-v-7073ec54] {\n  -webkit-transition: opacity 0.3s;\n  transition: opacity 0.3s;\n}\n.fade-enter[data-v-7073ec54],\n.fade-leave-to[data-v-7073ec54] {\n  opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.fade-enter-active[data-v-7073ec54],\r\n.fade-leave-active[data-v-7073ec54] {\r\n  -webkit-transition: opacity 0.3s;\r\n  transition: opacity 0.3s;\n}\n.fade-enter[data-v-7073ec54],\r\n.fade-leave-to[data-v-7073ec54] {\r\n  opacity: 0;\n}\r\n", ""]);
 
 // exports
 
