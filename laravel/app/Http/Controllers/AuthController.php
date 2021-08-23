@@ -16,8 +16,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-       $this->middleware('JWT', ['except' => ['login']]);
-      //   $this->middleware('auth:api', ['except' => ['login']]);
+        $this->middleware('auth:api', ['except' => ['login'], ]);
     }
   
     /**
@@ -53,35 +52,16 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
+    public function login(Request $request)
+    {
+        $credentials = request(['ic', 'password']);
 
-
- //  public function login(Request $request)
- //  {
- //      $credentials = request(['ic', 'password']);
-
- //      if (! $token = auth()->attempt($credentials)) {
- //          return response()->json(['error' => 'Unauthorized'], 401);
- //      }
-
- //      return $this->respondWithToken($token, $request->ic);
- //  }
-
-
-      public function login(Request $request)
-     {
-    if (!Auth::attempt($request->only('ic', 'password'))) {
-    return response()->json([
-    'message' => 'Invalid login details'
-               ], 401);
-           }
-    
-    $user = User::where('ic', $request['ic'])->firstOrFail();
-    
-    $token = $user->createToken('auth_token')->accessToken;
-    
-    return $this->respondWithToken($token, $request->ic);
+        if (! $token = auth()->attempt($credentials)) {
+            return response()->json(['error' => 'Unauthorized'], 401);
         }
-  //   app/Http/Controllers/AuthController.php
+
+        return $this->respondWithToken($token, $request->ic);
+    }
 
     /**
      * Log the user out (Invalidate the token).
@@ -114,7 +94,7 @@ class AuthController extends Controller
      */
     protected function respondWithToken($token, $ic)
     {
-        $user = User::select('menuroles as roles', 'name')->where('ic', '=', $ic)->first();
+        $user = User::select('menuroles as roles')->where('ic', '=', $ic)->first();
 
         return response()->json([
             'access_token' => $token,

@@ -8,19 +8,11 @@
               <CForm @submit.prevent="login" method="POST">
                 <h1>Login</h1>
                 <p class="text-muted">Sign In to your account</p>
-
-                    <CAlert
-              :show.sync="dismissCountDown"
-              color="danger"
-              fade
-            >
-              ({{dismissCountDown}}) {{ message }}
-            </CAlert>
                 <CInput
                   v-model="ic"
                   prependHtml="<i class='cui-user'></i>"
                   placeholder="No. Kad Pengenalan"
-                  autocomplete="ic"
+                  autocomplete="username ic"
                 >
                   <template #prepend-content><CIcon name="cil-user"/></template>
                 </CInput>
@@ -33,17 +25,12 @@
                 >
                   <template #prepend-content><CIcon name="cil-lock-locked"/></template>
                 </CInput>
-
-          
                 <CRow>
                   <CCol col="6">
                     <CButton type="submit" color="primary" class="px-4">Login</CButton>
                   </CCol>
               
                 </CRow>
-
-
-
               </CForm>
             </CCardBody>
           </CCard>
@@ -64,15 +51,14 @@ import axios from "axios";
         return {
           ic: '',
           password: '',
-        showMessage: false,
-        message: '',
-        dismissSecs: 5,
-        dismissCountDown: 0,
-        showDismissibleAlert: false
+          showMessage: true,
+          message: '',
         }
       },
       methods: {
-       
+        goRegister(){
+          this.$router.push({ path: 'register' });
+        },
         login() {
           let self = this;
           axios.post(  this.$apiAdress + '/api/login', {
@@ -83,23 +69,16 @@ import axios from "axios";
             self.password = '';
             localStorage.setItem("api_token", response.data.access_token);
             localStorage.setItem('roles', response.data.roles);
-            localStorage.setItem('user', response.data.name);
             self.$router.push({ path: 'dashboard' });
           })
           .catch(function (error) {
             self.message = 'Incorrect IC or password';
-            self.showAlert();
+            self.showMessage = true;
             console.log(error);
           });
   
-        }, 
-            countDownChanged (dismissCountDown) {
-      this.dismissCountDown = dismissCountDown
-        },
-        showAlert () {
-          this.dismissCountDown = this.dismissSecs
-        },
-          }
+        }
+      }
     }
 
 </script>

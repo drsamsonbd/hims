@@ -181,7 +181,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../laravel/node_modu
 
 
 // module
-exports.push([module.i, "\n.img-mini[data-v-605fdfe2]{\r\n  max-width:200px;\r\n  max-height:200px;\n}\r\n", ""]);
+exports.push([module.i, "\n.img-mini[data-v-605fdfe2]{\n  max-width:200px;\n  max-height:200px;\n}\n", ""]);
 
 // exports
 

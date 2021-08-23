@@ -6,10 +6,23 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="hbln.ico">
     <title>CoreUI - Hospital Beluran Patient Management System</title>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // Shared ID
+      gtag('config', 'UA-118965717-3');
+      // Vue.js ID
+      gtag('config', 'UA-118965717-7');
+    </script>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
- 
+    <script>
+        window.Laravel = {!! json_encode([
+            'csrfToken' => csrf_token(),
+        ]) !!};
+    </script>
 
   </head>
 

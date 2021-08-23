@@ -123,19 +123,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Login',
@@ -143,14 +130,16 @@ __webpack_require__.r(__webpack_exports__);
     return {
       ic: '',
       password: '',
-      showMessage: false,
-      message: '',
-      dismissSecs: 5,
-      dismissCountDown: 0,
-      showDismissibleAlert: false
+      showMessage: true,
+      message: ''
     };
   },
   methods: {
+    goRegister: function goRegister() {
+      this.$router.push({
+        path: 'register'
+      });
+    },
     login: function login() {
       var self = this;
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(this.$apiAdress + '/api/login', {
@@ -161,21 +150,14 @@ __webpack_require__.r(__webpack_exports__);
         self.password = '';
         localStorage.setItem("api_token", response.data.access_token);
         localStorage.setItem('roles', response.data.roles);
-        localStorage.setItem('user', response.data.name);
         self.$router.push({
           path: 'dashboard'
         });
       })["catch"](function (error) {
         self.message = 'Incorrect IC or password';
-        self.showAlert();
+        self.showMessage = true;
         console.log(error);
       });
-    },
-    countDownChanged: function countDownChanged(dismissCountDown) {
-      this.dismissCountDown = dismissCountDown;
-    },
-    showAlert: function showAlert() {
-      this.dismissCountDown = this.dismissSecs;
     }
   }
 });
@@ -235,36 +217,11 @@ var render = function() {
                                 _vm._v("Sign In to your account")
                               ]),
                               _vm._v(" "),
-                              _c(
-                                "CAlert",
-                                {
-                                  attrs: {
-                                    show: _vm.dismissCountDown,
-                                    color: "danger",
-                                    fade: ""
-                                  },
-                                  on: {
-                                    "update:show": function($event) {
-                                      _vm.dismissCountDown = $event
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n            (" +
-                                      _vm._s(_vm.dismissCountDown) +
-                                      ") " +
-                                      _vm._s(_vm.message) +
-                                      "\n          "
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
                               _c("CInput", {
                                 attrs: {
                                   prependHtml: "<i class='cui-user'></i>",
                                   placeholder: "No. Kad Pengenalan",
-                                  autocomplete: "ic"
+                                  autocomplete: "username ic"
                                 },
                                 scopedSlots: _vm._u([
                                   {

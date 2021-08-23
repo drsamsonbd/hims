@@ -308,7 +308,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../laravel/node_modu
 
 
 // module
-exports.push([module.i, "\n.btn[data-v-17b4971c] {\r\n  margin-bottom: 4px;\r\n  margin-right: 6px;\n}\r\n", ""]);
+exports.push([module.i, "\n.btn[data-v-17b4971c] {\n  margin-bottom: 4px;\n  margin-right: 6px;\n}\n", ""]);
 
 // exports
 

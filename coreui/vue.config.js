@@ -6,8 +6,5 @@ module.exports = {
     resolve: {
        symlinks: false
     }
-  },
-  devServer: {
-    proxy: 'https://his.hospbeluran.fastq.co'
   }
 }
