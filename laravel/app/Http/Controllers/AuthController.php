@@ -55,33 +55,33 @@ class AuthController extends Controller
      */
 
 
-    public function login(Request $request)
-    {
-        $credentials = request(['ic', 'password']);
+ //  public function login(Request $request)
+ //  {
+ //      $credentials = request(['ic', 'password']);
 
-        if (! $token = auth()->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+ //      if (! $token = auth()->attempt($credentials)) {
+ //          return response()->json(['error' => 'Unauthorized'], 401);
+ //      }
+
+ //      return $this->respondWithToken($token, $request->ic);
+ //  }
+
+
+      public function login(Request $request)
+     {
+    if (!Auth::attempt($request->only('ic', 'password'))) {
+    return response()->json([
+    'message' => 'Invalid login details'
+               ], 401);
+           }
+    
+    $user = User::where('ic', $request['ic'])->firstOrFail();
+    
+    $token = $user->createToken('auth_token')->accessToken;
+    
+    return $this->respondWithToken($token, $request->ic);
         }
-
-        return $this->respondWithToken($token, $request->ic);
-    }
-
-
-        //  public function login(Request $request)
-        // {
-        //if (!Auth::attempt($request->only('ic', 'password'))) {
-        //return response()->json([
-        //'message' => 'Invalid login details'
-        //           ], 401);
-        //       }
-        //
-        //$user = User::where('ic', $request['ic'])->firstOrFail();
-        //
-        //$token = $user->createToken('auth_token')->accessToken;
-        //
-        //return $this->respondWithToken($token, $request->ic);
-        //    }
-        // app/Http/Controllers/AuthController.php
+  //   app/Http/Controllers/AuthController.php
 
     /**
      * Log the user out (Invalidate the token).
