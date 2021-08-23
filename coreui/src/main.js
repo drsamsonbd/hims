@@ -9,7 +9,7 @@ import store from './store'
 // window.User = User
 
 
-Vue.prototype.$apiAdress = 'http://127.0.0.1:8000'
+Vue.prototype.$apiAdress = 'https://his.hospbeluran.fastq.co'
 Vue.config.performance = true
 Vue.use(CoreuiVue)
 
