@@ -6,5 +6,13 @@ module.exports = {
     resolve: {
        symlinks: false
     }
+  },
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'https://his.hospbeluran.fastq.co/',
+        changeOrigin: true
+      }
+    }
   }
 }
