@@ -1,8 +1,7 @@
-
 module.exports = {
 proxyTable: {
     '/api': {
-      target: 'https://his.hospbeluran.fastq.co',
+      target: 'http://127.0.0.1:8000',
       changeOrigin: true,
       pathRewrite: {
         '^/api': ''
